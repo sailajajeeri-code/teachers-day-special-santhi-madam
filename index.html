@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Teachers' Day ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #fff1f5, #fff8e7, #eee8ff);
+    color: #4b2940;
+    text-align: center;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.small {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 5px 20px #0002;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #9b3158;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+button {
+    margin-top: 25px;
+    padding: 15px 28px;
+    border: none;
+    border-radius: 30px;
+    background: #9b3158;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px #0003;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#surprise {
+    display: none;
+    margin-top: 25px;
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    color: #8c2f52;
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+
+.message {
+    background: #ffffffcc;
+    padding: 30px;
+    border-radius: 25px;
+    font-size: 19px;
+    line-height: 1.8;
+    box-shadow: 0 10px 30px #0002;
+}
+
+/* PHOTOS */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.photo-card {
+    background: white;
+    padding: 12px;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px #0002;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.photo-card p {
+    padding: 15px;
+    font-size: 18px;
+}
+
+/* HEART */
+.heart {
+    font-size: 45px;
+    animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* FOOTER */
+footer {
+    background: #8c2f52;
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* CONFETTI */
+.confetti {
+    position: fixed;
+    top: -20px;
+    font-size: 22px;
+    animation: fall 3s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* MOBILE */
+@media(max-width:600px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .photo-card img {
+        height: 400px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING -->
+<div class="hero">
+
+    <div class="small">
+        🌸 A Little Surprise For You 🌸
+    </div>
+
+    <h1>Happy Teachers' Day! ❤️</h1>
+
+    <p>
+        Some teachers teach lessons...
+        but the best teachers leave memories
+        that stay in our hearts forever. 💐
+    </p>
+
+    <button onclick="showSurprise()">
+        🎁 Open Your Surprise
+    </button>
+
+    <div id="surprise">
+        Thank you for every lesson, every smile,
+        every correction and every moment you
+        believed in us. ❤️
+        <br><br>
+        <b>You are truly special to us! 🌸</b>
+    </div>
+
+</div>
+
+
+<!-- MESSAGE -->
+<section>
+
+    <h2>💌 A Message For You</h2>
+
+    <div class="message">
+
+        Dear Madam, ❤️
+
+        <br><br>
+
+        Thank you for being more than just a teacher.
+        You have guided us, encouraged us and
+        inspired us to become better every day.
+
+        <br><br>
+
+        The lessons you taught us will not remain
+        only in our notebooks...
+        they will always remain in our hearts.
+
+        <br><br>
+
+        Thank you for believing in us,
+        supporting us and making our journey
+        more meaningful.
+
+        <br><br>
+
+        <b>
+        We are truly lucky to have a teacher like you. 🌷
+        </b>
+
+    </div>
+
+</section>
+
+
+<!-- PHOTOS -->
+<section>
+
+    <h2>📸 Beautiful Memories</h2>
+
+    <div class="gallery">
+
+        <div class="photo-card">
+
+            <img src="teacher1.jpg" alt="Beautiful Teacher Memory">
+
+            <p>
+                🌷 A beautiful memory
+                that will always be special.
+            </p>
+
+        </div>
+
+
+        <div class="photo-card">
+
+            <img src="teacher2.jpg" alt="Beautiful Teacher Memory">
+
+            <p>
+                ❤️ Thank you for being
+                a wonderful part of our journey.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL MESSAGE -->
+<section>
+
+    <div class="heart">❤️</div>
+
+    <h2>To Our Wonderful Teacher</h2>
+
+    <div class="message">
+
+        A great teacher doesn't just teach a subject...
+
+        <br><br>
+
+        A great teacher inspires,
+        guides and creates memories
+        that students carry for a lifetime.
+
+        <br><br>
+
+        <b>Happy Teachers' Day, Madam! 🌸💐</b>
+
+        <br><br>
+
+        Thank you for everything. ❤️
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    Made with ❤️ and gratitude
+
+    <br><br>
+
+    <b>
+    For a Teacher Who Will Always Be Remembered 🌷
+    </b>
+
+</footer>
+
+
+<script>
+
+function showSurprise() {
+
+    document.getElementById("surprise").style.display = "block";
+
+    const emojis = [
+        "🌸",
+        "❤️",
+        "✨",
+        "🎉",
+        "💐",
+        "⭐"
+    ];
+
+    for (let i = 0; i < 40; i++) {
+
+        const item = document.createElement("span");
+
+        item.className = "confetti";
+
+        item.innerHTML =
+            emojis[Math.floor(Math.random() * emojis.length)];
+
+        item.style.left =
+            Math.random() * 100 + "vw";
+
+        item.style.animationDelay =
+            Math.random() * 1.5 + "s";
+
+        document.body.appendChild(item);
+
+        setTimeout(() => {
+            item.remove();
+        }, 4000);
+    }
+}
+
+</script>
+
+</body>
+</html>
