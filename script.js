@@ -1,11 +1,23 @@
+// ===== SURPRISE BUTTON =====
+
 function showSurprise() {
 
     const surprise = document.getElementById("surprise");
 
     surprise.style.display = "block";
 
-    const emojis = ["🌸", "❤️", "✨", "🎉", "💐", "⭐"];
+    // Confetti emojis
+    const emojis = [
+        "🌸",
+        "❤️",
+        "✨",
+        "🎉",
+        "💐",
+        "⭐",
+        "🌷"
+    ];
 
+    // Create 40 confetti items
     for (let i = 0; i < 40; i++) {
 
         const item = document.createElement("span");
@@ -23,8 +35,65 @@ function showSurprise() {
 
         document.body.appendChild(item);
 
-        setTimeout(function () {
+        // Remove after animation
+        setTimeout(() => {
             item.remove();
-        }, 4000);
+        }, 4500);
     }
 }
+
+
+// ===== MUSIC PLAY / PAUSE =====
+
+function toggleMusic() {
+
+    const music = document.getElementById("music");
+
+    const button = document.getElementById("musicButton");
+
+    if (!music) {
+        alert("Music file not found!");
+        return;
+    }
+
+    if (music.paused) {
+
+        music.play();
+
+        if (button) {
+            button.innerHTML = "⏸️ Pause Music";
+        }
+
+    } else {
+
+        music.pause();
+
+        if (button) {
+            button.innerHTML = "🎵 Play Music";
+        }
+    }
+}
+
+
+// ===== MUSIC ENDED =====
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const music = document.getElementById("music");
+
+    if (music) {
+
+        music.addEventListener("ended", function () {
+
+            const button =
+                document.getElementById("musicButton");
+
+            if (button) {
+                button.innerHTML = "🎵 Play Music";
+            }
+
+        });
+
+    }
+
+});
