@@ -486,6 +486,320 @@ footer {
     margin-top: 10px;
     font-weight: bold;
 }
+<style>
+
+/* ===== RESET ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: linear-gradient(135deg, #fff1f5, #fff8e7, #eee8ff);
+    color: #4b2940;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+/* ===== HERO ===== */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.small {
+    background: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    box-shadow: 0 5px 20px #0002;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 52px;
+    color: #9b3158;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+
+/* ===== HEADINGS ===== */
+
+h2 {
+    color: #8c2f52;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+
+/* ===== BUTTON ===== */
+
+button {
+    margin-top: 25px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #9b3158;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px #0003;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.07);
+    background: #7d2447;
+}
+
+
+/* ===== SURPRISE ===== */
+
+#surprise {
+    display: none;
+    margin-top: 25px;
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 600px;
+    background: #ffffffcc;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px #0002;
+}
+
+
+/* ===== SECTIONS ===== */
+
+section {
+    padding: 70px 20px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+
+/* ===== MESSAGE CARD ===== */
+
+.message {
+    background: #ffffffdd;
+    padding: 32px;
+    border-radius: 25px;
+    font-size: 19px;
+    line-height: 1.8;
+    box-shadow: 0 10px 30px #0002;
+}
+
+
+/* ===== GALLERY ===== */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.photo-card {
+    background: white;
+    padding: 12px;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px #0002;
+    transition: 0.4s;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.photo-card p {
+    padding: 15px;
+    font-size: 18px;
+}
+
+
+/* ================================= */
+/* ===== TEACHER PHOTO SECTION ===== */
+/* ================================= */
+
+.teacher-section {
+    padding: 80px 20px;
+}
+
+.teacher-photo {
+    width: 250px;
+    height: 250px;
+    margin: 30px auto;
+    padding: 8px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #9b3158,
+        #f3a6bd,
+        #ffd166
+    );
+
+    box-shadow:
+        0 12px 35px #0003;
+
+    transition: 0.4s;
+}
+
+.teacher-photo:hover {
+    transform: scale(1.05);
+}
+
+.teacher-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid white;
+}
+
+
+/* ===== FROM YOUR STUDENT ===== */
+
+.teacher-section h3 {
+    font-size: 29px;
+    color: #9b3158;
+    margin-top: 25px;
+}
+
+.student-name {
+    font-size: 23px;
+    color: #6d2947;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+
+/* ===== HEART ===== */
+
+.heart {
+    font-size: 50px;
+    animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+
+    50% {
+        transform: scale(1.2);
+    }
+
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #8c2f52;
+    color: white;
+    padding: 45px 20px;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+
+/* ===== CONFETTI ===== */
+
+.confetti {
+    position: fixed;
+    top: -20px;
+
+    font-size: 22px;
+
+    animation: fall 4s linear forwards;
+
+    pointer-events: none;
+
+    z-index: 9999;
+}
+
+@keyframes fall {
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 29px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .message {
+        padding: 25px 20px;
+        font-size: 17px;
+    }
+
+    .teacher-photo {
+        width: 210px;
+        height: 210px;
+    }
+
+    .teacher-section h3 {
+        font-size: 24px;
+    }
+
+    .student-name {
+        font-size: 20px;
+    }
+
+    .photo-card img {
+        height: 400px;
+    }
+
+}
+
+</style>
 
 </footer>
 
